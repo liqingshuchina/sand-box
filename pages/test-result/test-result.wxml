@@ -1,0 +1,23 @@
+<!-- 报告弹出页 -->
+  <!-- <view class="report-dialog {{ dialogOpen ? 'open':'' }}" style="display:{{ dialogDisplay }}"> -->
+      <!-- <view class="code-box">
+        <text>编号：2020101010</text>
+      </view> -->
+      <view>
+      <view>
+        XXX先生! 以下是我们根据您模块摆放的位置所得出的结论,以下结论仅为我司单方面结论，仅供参考 ！
+      </view>
+      <view style="margin-top:10px;">
+        <text>心理分析：</text>
+      </view>
+      <view class="radar-box">
+        <ec-canvas id="mychart-dom-radar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+      </view>
+      <view class="desc-box" style="margin-top:10px;">
+        <view style="padding:4px;">
+          {{ reportWords }}
+        </view>
+      </view>
+      <button type="primary" bindtap="restart">重新测试</button>
+      </view>
+  <!-- </view> -->

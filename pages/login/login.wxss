@@ -1,0 +1,56 @@
+page,.container{
+  height: 100%;
+}
+/* reset */
+form{
+  display: block;
+}
+/* over */
+.container{
+  background-color: #f3f3f3;
+}
+.logo_section{
+ 
+  text-align: center;
+}
+.login_section{
+  margin-top:120rpx;
+  width: 80%;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+.logo_section image{
+  width: 100%;
+}
+.form_section{
+  margin-top: 20rpx;
+}
+.form_section input{
+  border:1px solid #ccc;
+  border-radius:4px;
+  padding:4px 10px;
+  color: #2c2f35;
+  background-color: #fff;
+}
+.form_section button{
+  display: block;
+  width: calc(100%)!important;
+  margin: 0;
+  margin-bottom: 20rpx;
+}
+button{
+  font-weight: normal!important;
+}
+button[type='primary']{
+  background-color: #2c89f0 !important;
+}
+/* loading animation */
+.loading-box{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: #fdfdfd;
+  text-align: center;
+  z-index: 10;
+}

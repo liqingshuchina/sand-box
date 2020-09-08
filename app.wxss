@@ -1,0 +1,51 @@
+
+/* 底部导航栏字体大小 */
+.tabbar--weui-tabbar__label{
+  font-size:26rpx !important;
+}
+/* 棋盘布局 */
+.sand-container{
+  display: flex;
+  justify-content: space-evenly;
+}
+.sand-box{
+  border-left:1px solid #ccc;
+  border-top:1px solid #ccc;
+  width:96%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.sand-box .sand-item{
+  /* width:10%;
+  padding-top:10%; */
+  width:2.77%;
+  padding-top:2.77%;
+  border-right:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+}
+.sand-box image{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+}
+.sand-controls image{
+  width: 10px;
+}
+.sand-controls{
+  display: flex;
+  flex-direction: column;
+}
+.sand-controls .sand-piece{
+  margin-bottom: 10rpx;
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,37 @@
+<!--logs.wxml-->
+<view class="container">
+  <!-- <block wx:for="{{logs}}" wx:for-item="log">
+    <text class="log-item">{{index + 1}}. {{log}}</text>
+  </block> -->
+  <view style="margin-left:30rpx;">
+    持续时间：{{durationTimeText}}
+    <text wx:if="{{ end }}">本局已结束</text>
+  </view>
+
+  <view class="sand-container">
+    <view class="sand-box">
+      <view wx:for="{{ boxData }}" wx:key="index" class="sand-item">
+        <image mode="widthFix" wx:if="{{ item.placed }}" src="{{ item.src }}"></image>
+      </view>
+    </view>
+    
+    <view class="sand-controls">
+      <view class="sand-piece" wx:for="{{boxItemCounts}}" wx:key="index">
+        <image mode="widthFix" src="{{ item.src }}"></image>
+        <text>x {{ item.count }}</text>
+      </view>
+      
+    </view>
+  </view>
+  <!-- 悬浮按钮 -->
+  <view class="control-btns">
+    <button bindtap="handleRefresh" type="primary" >刷新沙盘</button>
+    <button bindtap="handleReplay" disabled="{{ !end }}" >复盘本局</button>
+    <button bindtap="openReportPage" wx:if="{{ roundOver }}">查看报告</button>
+     
+  </view>
+  
+
+
+  
+</view>

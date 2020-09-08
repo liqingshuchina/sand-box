@@ -1,0 +1,34 @@
+<!--logs.wxml-->
+<view class="container log-list">
+  <view class="tab-box" bindtap="handleTabClick">
+    <view data-index="{{index}}"  wx:for="{{tabs}}" wx:key="index" class="tab-item {{ index ===  currentTabIndex ? 'active':''}}">
+    {{ item }}
+    </view>
+  </view>
+  <view class="main-box">
+    <view wx:if="{{ currentTabIndex === 0 }}">
+      配置沙盘
+    </view>
+    <view wx:elif="{{ currentTabIndex === 1 }}">
+      <mp-form>
+       <mp-cells title="">
+            <mp-cell title="原密码" ext-class="">
+                <input data-field="oldpassword" class="weui-input" placeholder="请输入原密码"/>
+            </mp-cell>
+            <mp-cell title="新密码" ext-class="">
+                <input data-field="newpassword_1" class="weui-input" placeholder="请输入新密码"/>
+            </mp-cell>
+            <mp-cell title="新密码" ext-class="">
+                <input data-field="newpassword_2" class="weui-input" placeholder="请输入新密码"/>
+            </mp-cell>
+        </mp-cells>
+        <button type="primary">确定</button>
+      </mp-form>
+    </view>
+    <view wx:if="{{ currentTabIndex === 2 }}">
+      简介...
+    </view>
+  </view>
+  <!-- 底部导航条 -->
+    <!-- <mp-tabbar current="1" style="font-size:20px;position:fixed;bottom:0;width:100%;left:0;right:0;" list="{{list}}" bindchange="tabChange"></mp-tabbar> -->
+</view>

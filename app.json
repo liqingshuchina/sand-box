@@ -1,0 +1,43 @@
+{
+  "usingComponents":{},
+  "pages":[
+    "pages/login/login",
+    "pages/sandbox/sandbox",
+    "pages/test-result/test-result",
+    "pages/config/config",
+    "pages/replay/replay"
+  ],
+  "window":{
+    "navigationBarTitleText": "电子沙盘",
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#333",
+    "borderStyle": "white",
+    "selectedColor": "#2d8cf0",
+    "backgroundColor": "#eee",
+    "list": [
+      {
+        "pagePath": "pages/sandbox/sandbox",
+        "text": "沙盘",
+        "iconPath": "images/sand.png",
+        "selectedIconPath": "images/sands.png"
+      },
+      {
+        "pagePath": "pages/config/config",
+        "text": "设置",
+        "iconPath": "images/setting.png",
+        "selectedIconPath": "images/settings.png"
+      }
+      
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "useExtendedLib": {
+    "weui": true
+  }
+
+}

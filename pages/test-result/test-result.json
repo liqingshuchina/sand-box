@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "测试结果",
+  "usingComponents": {
+    "mp-tabbar": "weui-miniprogram/tabbar/tabbar",
+    "ec-canvas":"../../ec-canvas/ec-canvas"
+  }
+}

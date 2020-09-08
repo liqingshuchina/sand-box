@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<!-- loading animation -->
+<!-- <image wx:if="loading" class="loading-image" src="../../images/loading.png"></image> -->
+<view wx:if="{{ loading }}" class="loading-box">
+  <image mode="widthFix" src="../../images/loading.gif"></image>
+</view>
+
+<view wx:if="{{ !loading && !user }}" class="container">
+  <view class="logo_section">
+    <image mode="widthFix" src="../../images/logo.png"></image>
+  </view>
+  <view class="login_section" wx:if="{{ !userInfo }}">
+    <form catchsubmit="formSubmit" catchreset="formReset">
+      <view class="form_section">
+        <input name="name" placeholder="请输入用户名" />
+      </view>
+      <view class="form_section">
+        <input type="password" name="password" placeholder="请输入密码" />
+      </view>
+      <view class="form_section">
+        <checkbox-group name="remember">
+          <label class="checkbox">
+            <checkbox value="true" />记住密码
+          </label>
+        </checkbox-group>
+      </view>
+      <view class="form_section">
+        <button type="primary" formType="submit">登录</button>
+        <!-- <button formType="reset">清空</button> -->
+      </view>
+    </form>
+     <mp-dialog title="提醒" show="{{showMsg}}" bindbuttontap="tapDialogButton" buttons="{{msgBtns}}">
+        <view>{{ msgContent }}</view>
+    </mp-dialog>
+  </view>
+</view>

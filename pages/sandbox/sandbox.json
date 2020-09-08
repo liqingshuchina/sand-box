@@ -1,0 +1,8 @@
+{
+  "pageOrientation": "auto",
+
+  "usingComponents": {
+    "mp-tabbar": "weui-miniprogram/tabbar/tabbar",
+    "ec-canvas":"../../ec-canvas/ec-canvas"
+  }
+}

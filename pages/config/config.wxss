@@ -1,0 +1,17 @@
+.tab-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: #f8f8f8;
+  padding:4px 0;
+}
+.tab-item{
+  padding:8rpx 0;
+  border-bottom: 2rpx solid transparent;
+}
+.tab-item.active{
+  font-size:28rpx;
+  font-weight: bold;
+  border-bottom-color: #07c160;
+}

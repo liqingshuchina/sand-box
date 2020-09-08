@@ -1,0 +1,27 @@
+<!--logs.wxml-->
+<view class="container">
+  <view class="sand-container">
+    <view class="sand-box">
+      <view wx:for="{{ currentData }}" wx:key="index" class="sand-item">
+        <image mode="widthFix" wx:if="{{ item.placed }}" src="{{ item.imgUrl }}"></image>
+      </view>
+    </view>
+    <view class="sand-controls">
+      <view class="sand-piece" wx:for="{{sandImages}}" wx:key="index">
+        <image mode="widthFix" src="{{ item.src }}"></image>
+        <text>x {{ item.count }}</text>
+      </view>
+      
+    </view>
+  </view>
+  <view style="margin-left:20rpx;">
+    <picker bindchange="bindPickerChange" value="{{speedIndex}}" range="{{speedArr}}">
+      <view class="picker">
+        请选择回放速率：{{speedArr[speedIndex]}}
+      </view>
+    </picker>
+    <!-- <view wx:if="{{status == 'active'}}"><button bindtap="pausePlay"  type="warn">暂停</button></view> -->
+    <button bindtap="pausePlay" type="{{  status === 'active' ? 'warn':'primary' }}">{{  status === 'active' ? '暂停':'继续' }}</button>
+  </view>
+  
+</view>
